@@ -1,0 +1,102 @@
+html{
+	font-size: 50px;
+}
+
+.lf{
+	float: left;
+}
+.rt{
+	float: right;
+}
+/****首屏图片****/
+.firstW{
+	width: 100%;
+	height: 3.75rem;
+}
+.firstW>img{
+	width: 100%;
+	height: 100%;
+}
+/*内容*/
+.second{
+	width: 100%;
+	
+	/*background: cadetblue;*/
+}
+.second>.content{
+	width: 6.9rem;
+	height: 10.08rem;
+	margin: 0 auto;
+	/*background: firebrick;*/
+}
+.content>h1{
+	    font-size: 0.32rem;
+    margin-top: 0.39rem;
+    margin-bottom: 0.2rem;
+}
+.second>.content>p>span{
+	font-size: 0.2rem;
+} 
+.second>.content>p .schoolLogo{
+	    width: 0.24rem;
+    height: 0.24rem;
+    background: url(../img/png1.png) no-repeat 0px 0px;
+    background-size: 100%;
+    display: inline-block;
+    margin-left: 0.1rem;
+    /*vertical-align: bottom;*/
+}
+.second>.content .content_1{
+	
+	height: 2.43rem;
+	background: #f7f7f7;
+	margin-top: 0.35rem;
+	padding: 0.35rem 0.52rem;
+	
+}
+.content_1 .time{
+	width: 5.88rem;
+	margin: 0 auto;
+}
+.content_1 div .p1{
+	font-size: 0.2rem;
+	color: #999;
+}
+.content_1 div .p2{
+	font-size: 0.25rem;
+	color: #000;
+	margin-top: 0.13rem;
+}
+.content_1>.line{
+	width: 5.88rem;
+	height: 0.03rem;
+	background: #f0f0f0;
+	margin: 0.26rem auto ;
+	display: block;
+	float: left;
+}
+.content>.line2{
+	height: 0.05rem;
+	background: #F7F7F7;
+	margin-top: 0.3rem;
+}
+.content_2 p{
+	font-size: 0.25rem;
+	color: #999999;
+	margin: 0.3rem 0;
+}
+.content_2 .img{
+	height: 3.6rem;
+	
+	
+}
+.content_2 .img>img{
+	width: 100%;
+	height: 100%;
+}
+/*foot*/
+.third{
+	width: 100%;
+	height: 4.1rem;
+	background: #F7F7F7;
+}
