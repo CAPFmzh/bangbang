@@ -110,7 +110,7 @@ html{
 .third>p{
 	font-size: 0.2rem;
 	color: #999;
-	margin: 0.25rem 0 0 0.4rem;
+	margin: 0.25rem 0.7rem 0 0.4rem;
 }
 .third>div>.p1{
 	font-size: 0.2rem;
@@ -138,7 +138,7 @@ html{
 }
 .btn>div{
 	width: 6.25rem;
-	height: 0.9rem;
+	height: 1.1rem;
 	margin: 0 auto;
 	padding: 0.15rem;
 	
@@ -163,3 +163,9 @@ html{
 	float: right;
 	background-size: 100%;
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){
+        .third{
+        	height: 4rem;
+        }
+    }
+
