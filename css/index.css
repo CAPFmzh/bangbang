@@ -48,7 +48,8 @@ html{
 }
 .second>.content .content_1{
 	
-	height: 2.43rem;
+	/*height: 2.43rem;*/
+	height:2rem;
 	background: #f7f7f7;
 	margin-top: 0.35rem;
 	padding: 0.35rem 0.52rem;
