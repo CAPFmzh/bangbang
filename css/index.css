@@ -44,7 +44,7 @@ html{
     background-size: 100%;
     display: inline-block;
     margin-left: 0.1rem;
-    vertical-align: bottom;
+    /*vertical-align: bottom;*/
     
 }
 .second>.content .content_1{
