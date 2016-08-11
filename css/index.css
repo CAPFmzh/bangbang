@@ -129,8 +129,8 @@ html{
 	color: #2ebb9c;
 }
 .third>.cost{
-	border-top:0.01rem solid #ededed ;
-	border-bottom: 0.01rem solid #ededed;
+	border-top:0.02rem solid #999 ;
+	border-bottom: 0.02rem solid #999;
 }
 /****btn****/
 .btn{
@@ -163,9 +163,9 @@ html{
 	float: right;
 	background-size: 100%;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){
+/*@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){
         .third{
         	height: 4rem;
         }
-    }
+    }*/
 
