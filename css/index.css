@@ -45,6 +45,7 @@ html{
     display: inline-block;
     margin-left: 0.1rem;
     /*vertical-align: bottom;*/
+    vertical-align: initial;
 }
 .second>.content .content_1{
 	
