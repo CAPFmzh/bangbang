@@ -1,7 +1,9 @@
 html{
 	font-size: 50px;
 }
-
+body{
+	font-family: 'PingFangSC-Regular';
+}
 .lf{
 	float: left;
 }
@@ -11,7 +13,7 @@ html{
 /****首屏图片****/
 .firstW{
 	width: 100%;
-	height: 3.75rem;
+	height: 3.6rem;
 }
 .firstW>img{
 	width: 100%;
@@ -30,13 +32,35 @@ html{
 	/*background: firebrick;*/
 }
 .content>h1{
-	    font-size: 0.32rem;
-    margin-top: 0.39rem;
-    margin-bottom: 0.2rem;
+	font-size: 0.36rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.12rem;
+    font-family: 'PingFang-SC-Medium';
 }
-.second>.content>p>span{
-	font-size: 0.2rem;
+.second>.content>p>span:nth-child(1){
+	font-size: 0.22rem 'PingFangSC-Regular';
+	color: #999;
 } 
+.second>.content>p>span:nth-child(2){
+	
+}
+.second>.content>p>span:nth-child(3){
+	float: right;
+	margin-left: 0.4rem;
+}
+.second>.content>p>span:nth-child(4){
+	float: right;
+}
+.second>.content>p>span>img{
+	width: 0.23rem;
+	height: 0.18rem;
+}
+.second>.content>p>span>b{
+	font-weight:100 ;
+	font-size: 0.22rem 'PingFangSC-Regular';
+	color: #999;
+	margin-left: 0.1rem;
+}
 .second>.content>p .schoolLogo{
 	    width: 0.24rem;
     height: 0.24rem;
@@ -45,14 +69,12 @@ html{
     display: inline-block;
     margin-left: 0.1rem;
     /*vertical-align: bottom;*/
-    
 }
 .second>.content .content_1{
-	
-	height: 2rem;
+	height: 2.42rem;
 	background: #f7f7f7;
-	margin-top: 0.35rem;
-	padding: 0.35rem 0.52rem;
+	margin-top:0.31rem ;
+	padding: 0.3rem 0.52rem;
 	
 }
 .content_1 .time{
@@ -60,12 +82,12 @@ html{
 	margin: 0 auto;
 }
 .content_1 div .p1{
-	font-size: 0.2rem;
+	font-size: 0.22rem;
 	color: #999;
 }
 .content_1 div .p2{
-	font-size: 0.25rem;
-	color: #000;
+	font-size: 0.28rem;
+	color: #333333;
 	margin-top: 0.13rem;
 }
 .content_1>.line{
@@ -82,9 +104,16 @@ html{
 	margin-top: 0.3rem;
 }
 .content_2 p{
-	font-size: 0.25rem;
+	font-size: 0.28rem;
 	color: #999999;
-	margin: 0.3rem 0;
+	
+}
+.content_2 .p1{
+	margin: 0.3rem 0 0.2rem 0 ;
+}
+.content_2 .p2{
+	margin: 0.2rem 0 0.3rem 0 ;
+	line-height: 0.4rem;
 }
 .content_2 .img{
 	height: 3.6rem;
@@ -97,29 +126,29 @@ html{
 }
 /*foot*/
 .third{
-	height: 3.5rem;
+	height: 3.4rem;
 	background: #F7F7F7;
-	padding: 0.45rem 0;
+	padding: 0.3rem 0 0.4rem 0;
 }
 .third>div{
 	height: 0.85rem;
 	/*line-height: 0.85rem;*/
 	margin-left: 0.4rem;
-	margin-right: 0.7rem;
-	padding-top: 0.2rem;
+	margin-right: 0.67rem;
+	padding-top: 0.15rem;
 }
 .third>p{
-	font-size: 0.2rem;
+	font-size: 0.22rem;
 	color: #999;
 	margin: 0.25rem 0.7rem 0 0.4rem;
 }
 .third>div>.p1{
-	font-size: 0.2rem;
+	font-size: 0.22rem;
 	color: #999;
 	line-height: 0.35rem;
 }
 .third>div>.p2{
-	font-size: 0.25rem;
+	font-size: 0.28rem;
 	font-weight: bold;
 	
 }
@@ -130,8 +159,8 @@ html{
 	color: #2ebb9c;
 }
 .third>.cost{
-	border-top:0.02rem solid #999 ;
-	border-bottom: 0.02rem solid #999;
+	border-top:0.01rem solid #ededed ;
+	border-bottom: 0.01rem solid #ededed;
 }
 /****btn****/
 .btn{
@@ -150,9 +179,12 @@ html{
 	text-align: center;
 	border: none;
 	background-size: 100%;
-	font-size: 0.25rem;
-	color: #FFF;
+	font-size: 0.28rem;
+	font-family: 'PingFangSC-Regular';
 	
+}
+.btn>div>button>a{
+	color: #FFFFFF;
 }
 .btn .btnl{
 	background: url(../img/png2.png) no-repeat 0rem 0.035rem;
@@ -169,4 +201,116 @@ html{
         	height: 4rem;
         }
     }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***index2***/
+.title{
+	font-size: 0.24rem;
+	color: #999999;
+	margin: 0.2rem 0 0.2rem 0.3rem;
+}
+input{
+	border: none;
+	font:0.28rem "PingFangSC-Regular";
+	color: #d9d9d9;
+	margin-left:0.2rem;
+	
+}
+form>div{
+	padding: 0.25rem 0 0.25rem 0.3rem;	
+	height: 0.4rem;
+	background: #FFFFFF;
+	
+}
+form>div>label{
+	width: 1.12rem;
+	height: 0.4rem;
+	color: #333;
+	font:0.28rem "PingFangSC-Regular";
+}
+
+.phone{
+	border-top:0.01rem solid #d9d9d9;
+}
+
+.submit{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0.8rem auto 0;
+	width: 6rem;
+	height: 0.9rem;
+	background-color: #0096ff;
+	font-size:0.28rem ;
+	font-family: "PingFangSC-Light";
+	color: #fff;
+	border: none;
+    text-align: center;
+    border-radius: 30px;
+    -webkit-box-shadow:  0px 10px 17px -9px  rgba(0,150,255, .3);
+    box-shadow:  0px 10px 17px -9px  rgba(0,150,255, .3);
+    /*-webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+    -ms-transition: all 0.15s ease;
+    transition: all 0.15s ease;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
