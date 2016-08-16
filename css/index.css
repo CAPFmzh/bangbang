@@ -214,7 +214,7 @@ body{
 	
 }
 .btn .btnr{
-	box-shadow:  0px 4px 6px 0px   rgba(250,222,159,.3);
+	box-shadow:  0px 4px 6px 0px   rgb(250,222,159);
 	background-color: #FDB100;
 	float: right;
 	
