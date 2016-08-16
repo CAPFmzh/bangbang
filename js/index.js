@@ -1,22 +1,24 @@
 /*动态计算rem值*/
-!(function(win, doc){
+!(function (win, doc) {
     function setFontSize() {
         // 获取window 宽度
         // zepto实现 $(window).width()就是这么干的
-        var winWidth =  window.innerWidth;
+        var winWidth = window.innerWidth;
         // doc.documentElement.style.fontSize = (winWidth / 640) * 100 + 'px' ;
         // 2016-01-13 订正
         // 640宽度以上进行限制 需要css进行配合
-        var size = (winWidth / 750) * 100;/*750为设计搞大小*/
-        doc.documentElement.style.fontSize = (size < 100 ? size : 100) + 'px' ;
+        var size = (winWidth / 750) * 100;
+        /*750为设计搞大小*/
+        doc.documentElement.style.fontSize = (size < 100 ? size : 100) + 'px';
     }
-    var evt = 'onorientationchange' in win ? 'orientationchange' : 'resize';  
-    var timer = null; 
+
+    var evt = 'onorientationchange' in win ? 'orientationchange' : 'resize';
+    var timer = null;
     win.addEventListener(evt, function () {
         clearTimeout(timer);
         timer = setTimeout(setFontSize, 300);
-    }, false);   
-    win.addEventListener("pageshow", function(e) {
+    }, false);
+    win.addEventListener("pageshow", function (e) {
         if (e.persisted) {
             clearTimeout(timer);
             timer = setTimeout(setFontSize, 300);
@@ -28,47 +30,147 @@
 
 
 /****控制input  初始的value 获取失去焦点 显示value值******/
-$(function(){ 
-     $('#na').bind({ 
-          focus:function(){ 
-          	 $(this).css('color','#333333')
-             if (this.value == this.defaultValue){ 
-                  this.value="";
-               } 
-            }, 
-          blur:function(){ 
-             if (this.value == ""){ 
-                   this.value = this.defaultValue; 
-                   $(this).css('color','#d9d9d9')
-               } 
-            } 
-        }); 
-        $('#ph').bind({ 
-          focus:function(){ 
-          	 $(this).css('color','#333333')
-             if (this.value == this.defaultValue||this.value==this.value){ 
-                  this.value=""; 
-               } 
-            }, 
-          blur:function(){ 
-             if (this.value == ""){ 
-                   this.value = '请输入手机号'; 
-                   $(this).css('color','#d9d9d9')
-              }else  if(!/^1[3|4|5|8]\d{9}$/.test(this.value)){
-             	   this.value='请输入正确手机号';
-             	   $(this).css('color','#d9d9d9')
-                }
-            } 
-    }); 
+$(function () {
+    $('#na').bind({
+        focus: function () {
+            $(this).css('color', '#333333')
+            if (this.value == this.defaultValue) {
+                this.value = "";
+            }
+        },
+        blur: function () {
+            if (this.value == "") {
+                this.value = this.defaultValue;
+                $(this).css('color', '#d9d9d9')
+            }
+        }
+    });
+    $('#ph').bind({
+        focus: function () {
+            $(this).css('color', '#333333')
+            if (this.value == this.defaultValue || this.value == this.value) {
+                this.value = "";
+            }
+        },
+        blur: function () {
+            if (this.value == "") {
+                this.value = '请输入手机号';
+                $(this).css('color', '#d9d9d9')
+            } else if (!/^1[3|4|5|8]\d{9}$/.test(this.value)) {
+                this.value = '请输入正确手机号';
+                $(this).css('color', '#d9d9d9')
+            }
+        }
+    });
 })
 
 
 /****点击提交 input value值*****/
 
+/*$(function(){
 
+ function serializable(myform){
+ //我们要序列化myform表单
+ myform.elements //所有的表单元素
+ //DOM集合 是类数组
+ var result = []
+ var arr = Array.prototype.slice.call(myform.elements);
+ arr.forEach(function (item) {
+ if(item.type=='text'||item.type=='password'){
+ //将数表单的键和值通过=拼接放到数组内
+ result.push(item.name+'='+item.value);
+ }
+ });
+ return result.join('&');
+ }
+ var $submint=$("#submit")
+ $submint.on('click',function(){
+ $.ajax({
+ cache: true,
+ type: "POST",
+ url:"/ssss/",
+ data: serializable($submint),// 你的formid
+ async: false,
+ error: function(request) {
+ alert("Connection error");
+ },
+ success: function(data) {
+ $("#commonLayout_appcreshi").parent().html(data);
+ }
+ });
+ })
 
+ })*/
+$(function submit() {
+    var myform = document.querySelector('#form');
+    var btn = document.getElementById('submit');
 
+    function serializable(myform) {
+        //我们要序列化myform表单
+        myform.elements //所有的表单元素
+        //DOM集合 是类数组
+        var result = []
+        var arr = Array.prototype.slice.call(myform.elements);
+        arr.forEach(function (item) {
+            if (item.type == 'text' || item.type == 'tel') {
+                //将数表单的键和值通过=拼接放到数组内
+                if (item.value == item.defaultValue || item.value == '') {
+                    return
+                }
+                result.push(item.name + '=' + item.value);
+            }
+        });
+        return result.join('&');
+    };
+    var name = document.getElementById('na');
+    var ph = document.getElementById('ph');
+    btn.addEventListener('click', function () {
+        if ((name.value == '' || name.value == '请输入姓名') && (ph.value == '' || ph.value == '请输入手机号')) {
+            alert('姓名 手机号不能为空')
+        } else {
+            if (name.value == '' || name.value == '请输入姓名') {
+                alert('姓名不能为空')
+            }
+            if (ph.value == '' || ph.value == '请输入手机号') {
+                alert('手机号不能为空')
+            }
+        }
+        if ( (name.value != '请输入姓名' && ph.value != '请输入手机号')&&(name.value != '' && ph.value != '') ) {
+            alert('报名成功');
+            $('.tishi').css('display', 'block');
+            var style = setTimeout(function () {
+                $('.tishi').css('display', 'none');
+            }, 800);
+            var zi = setTimeout(function () {
+                name.value = '请输入姓名';
+                ph.value = '请输入手机号';
+                if (name.value == '请输入姓名' || ph.value == '请输入手机号') {
+                    $('input').css('color', '#d9d9d9');
+                }
+            }, 900);
 
+            //name.value='请输入姓名';
+            //ph.value='请入输入手机号';
+            //if(name.value=='请输入姓名'|| ph.value=='请入输入手机号'){
+            //    $('input').css('color','#d9d9d9');
+            //}
+
+            /*var str='';
+             str='<div class="tishi">报名成功</div>';
+             document.body.appendChild(myform,str);*/
+        }
+        var xhr = new XMLHttpRequest();
+        //post请求 发送给服务器端
+        xhr.open('post', '/reg', true);
+        xhr.responseType = 'json'; //设置响应回来的数据就是json格式
+        xhr.onload = function () {
+            //直接取回来的就是json格式JSON.parse(xhr.responseText)
+        };
+        var json = serializable(myform);
+        json.split('&');
+        xhr.send(console.log(json)); //send里放字符串
+    }, false);
+})
 
 
 /****index页  ajax请求数据绑定****/
