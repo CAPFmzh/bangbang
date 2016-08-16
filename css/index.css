@@ -149,7 +149,7 @@ body{
 }
 .third>div>.p2{
 	font-size: 0.28rem;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	
 }
 .blue{
@@ -163,12 +163,22 @@ body{
 	border-bottom: 0.01rem solid #ededed;
 }
 /****btn****/
+.ss{
+	width: 100%;
+	height: 1.1rem;
+}
 .btn{
-	;
+	position: fixed;
+	left:0;
+	bottom: 0;
+	width: 100%;
+	height: 1.1rem;
+	background: #fff;
+	
 }
 .btn>div{
 	width: 6.25rem;
-	height: 1.1rem;
+	height: 100%;
 	margin: 0 auto;
 	padding: 0.15rem;
 	
@@ -181,20 +191,30 @@ body{
 	background-size: 100%;
 	font-size: 0.28rem;
 	font-family: 'PingFangSC-Regular';
+	border: none;
+    text-align: center;
+    border-radius: 30px;
+    
+    
+
 	
 }
 .btn>div>button>a{
 	color: #FFFFFF;
+	
+	
 }
 .btn .btnl{
-	background: url(../img/png2.png) no-repeat 0rem 0.035rem;
+	box-shadow:  0px 4px 6px 0px  rgba(0,150,255, .3);
+	background-color: #0096ff;
 	float: left;
-	background-size: 100%;
+	
 }
 .btn .btnr{
-	background: url(../img/png2.png) no-repeat 0rem -0.87rem;
+	box-shadow:  0px 4px 6px 0px   rgb(250,222,159);
+	background-color: #FDB100;
 	float: right;
-	background-size: 100%;
+	
 }
 /*@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){
         .third{
@@ -262,7 +282,7 @@ form>div>label{
 }
 
 .phone{
-	border-top:0.01rem solid #d9d9d9;
+	border-top:0.02rem solid #d9d9d9;
 }
 
 .submit{
@@ -279,17 +299,50 @@ form>div>label{
 	border: none;
     text-align: center;
     border-radius: 30px;
-    -webkit-box-shadow:  0px 10px 17px -9px  rgba(0,150,255, .3);
-    box-shadow:  0px 10px 17px -9px  rgba(0,150,255, .3);
+    -webkit-box-shadow:  0px 4px 6px 0px   rgba(0,150,255, .3);
+    box-shadow:  0px 4px 6px 0px  rgba(0,150,255, .3);
     /*-webkit-transition: all 0.15s ease;
     -moz-transition: all 0.15s ease;
     -o-transition: all 0.15s ease;
     -ms-transition: all 0.15s ease;
     transition: all 0.15s ease;*/
 }
+.tishi{
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: 0.9rem;
+   
+    /*bottom: 5.38rem;*/
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 0.3rem;
+    text-align: center;
+    width: 5.5rem;
+    height: 5.58rem;
+    line-height: 2rem;
+	display: none;
+}
 
-
-
+.tishi>img{
+	width: 100%;
+	height: 100%;
+}
+.tishi>div{
+	position: absolute;
+	bottom:0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	background: #d9d9d9;
+	border-bottom-left-radius: 0.21rem;
+	border-bottom-right-radius: 0.21rem;
+	font-size: 0.28rem;
+	
+	
+	}
 
 
 
