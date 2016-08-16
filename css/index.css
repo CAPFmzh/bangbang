@@ -208,13 +208,13 @@ body{
 	
 }
 .btn .btnl{
-	box-shadow:  0px 10px 17px -9px  rgba(0,150,255, .3);
+	box-shadow:  0px 4px 6px 0px  rgba(0,150,255, .3);
 	background-color: #0096ff;
 	float: left;
 	
 }
 .btn .btnr{
-	box-shadow:  0px 10px 17px -9px  #FADE9F;
+	box-shadow:  0px 4px 6px 0px  #FADE9F;
 	background-color: #FDB100;
 	float: right;
 	
