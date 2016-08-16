@@ -149,7 +149,7 @@ body{
 }
 .third>div>.p2{
 	font-size: 0.28rem;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	
 }
 .blue{
@@ -275,7 +275,7 @@ form>div>label{
 }
 
 .phone{
-	border-top:0.01rem solid #d9d9d9;
+	border-top:0.02rem solid #d9d9d9;
 }
 
 .submit{
