@@ -191,6 +191,14 @@ body{
 	background-size: 100%;
 	font-size: 0.28rem;
 	font-family: 'PingFangSC-Regular';
+	
+	
+	
+	border: none;
+    text-align: center;
+    border-radius: 30px;
+    
+    
 
 	
 }
@@ -200,14 +208,16 @@ body{
 	
 }
 .btn .btnl{
-	background: url(../img/png2.png) no-repeat 0rem 0.035rem;
+	box-shadow:  0px 10px 17px -9px  rgba(0,150,255, .3);
+	background-color: #0096ff;
 	float: left;
-	background-size: 100%;
+	
 }
 .btn .btnr{
-	background: url(../img/png2.png) no-repeat 0rem -0.87rem;
+	box-shadow:  0px 10px 17px -9px  #FADE9F;
+	background-color: #FDB100;
 	float: right;
-	background-size: 100%;
+	
 }
 /*@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){
         .third{
