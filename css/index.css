@@ -152,6 +152,10 @@ body{
 	/*font-weight: bold;*/
 	
 }
+#telhref>a{
+	text-decoration: underline;
+	color: #333;
+}
 .blue{
 	color: #0096ff;
 }
