@@ -105,7 +105,8 @@ $(function submit() {
         }
          if (!/^1[3|4|5|8]\d{9}$/.test(ph.value)) {
                 this.value = '请输入正确手机号';
-                $(this).css('color', '#d9d9d9')
+                $(this).css('color', '#d9d9d9');
+                return;
             }
         if ( (name.value != '请输入姓名' && ph.value != '请输入手机号')&&(name.value != '' && ph.value != '') ) {
             
