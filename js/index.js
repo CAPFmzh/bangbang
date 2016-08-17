@@ -103,12 +103,12 @@ $(function submit() {
                 return;
             }
         }
-        if ( (name.value != '请输入姓名' && ph.value != '请输入手机号')&&(name.value != '' && ph.value != '') ) {
-        	if (!/^1[3|4|5|8]\d{9}$/.test(this.value)) {
+        if (!/^1[3|4|5|8]\d{9}$/.test(ph.value)) {
 	                this.value = '请输入正确手机号';
 	                $(this).css('color', '#d9d9d9')；
 	                return
             	}
+        if ( (name.value != '请输入姓名' && ph.value != '请输入手机号')&&(name.value != '' && ph.value != '') ) {
             $('.tishi').css('display', 'block');// 报名成功显示提示
             $(function none () {//提示框消失
     			$('.tishi>div').on('click',function  () {
