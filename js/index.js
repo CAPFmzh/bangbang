@@ -66,7 +66,7 @@ $(function () {
 
 
 /****点击提交 input value值*****///以下代码是判断input  value值的  
-function submit() {
+$(function submit() {
     var myform = document.querySelector('#form');
     var btn = document.getElementById('submit');
 
@@ -139,7 +139,7 @@ function submit() {
         var json = serializable(myform);
         xhr.send(json); //send里放字符串
     }, false);
-}
+})
 
 
 
