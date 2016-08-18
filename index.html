@@ -70,34 +70,49 @@
 				<button class="btnr"><a href="index2.html">报名</a></button>
 			</div>
 		</div>
-		<div style="width: 100%;height:100%;line-height:100%;position: fixed;top: 0;left: 0;background: rgba(0,0,0,.3);z-index:5;text-align: center"><span id="ss">111</span></div>
+		<div style="width: 100%;height:100%;line-height:100%;position: fixed;top: 0;left: 0;background: rgba(0,0,0,.3);z-index:5;text-align: center"><button id="ss111" onclick="ss()">111</button></div>
 	</body>
 </html>
 
 <script type="text/javascript" src="js/jquery-1.11.3.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="js/index.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/fastClick.js" charset="UTF-8"></script>
+
 <script>
-	//$('html,body').css('overflow','hidden');
-	// if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-	// 	alert(navigator.userAgent);
-	// 	document.body.addEventListener('touchmove', function(event) {
-	// 		event.preventDefault();
-	// 	}, false);
-	// } else if (/(Android)/i.test(navigator.userAgent)) {
-	// 	alert(navigator.userAgent);
-	// 	document.body.addEventListener('touchmove', function(event) {
-	// 		event.preventDefault();
-	// 	}, false);
-	// //$('html,body').css('overflow','hidden');
-	// }
-document.body.addEventListener('touchmove', function(event) {
+
+
+	/*document.body.addEventListener('touchmove',function stor(event){
 		event.preventDefault();
 	}, false);
-	$('#ss').on('click',function(){
-		document.body.removeEventListener('touchmove', function(event) {
+	var ss=document.getElementById('#ss');
+	document.body.addEventListener('click',function(event){
+		document.body.removeEventListener('touchmove',function stor(event){
 			event.preventDefault();
 		}, false);
-	});
+	});*/
+
+	if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+		alert(navigator.userAgent);
+		document.body.addEventListener('touchmove', function(event) {
+			event.preventDefault();
+		}, false);
+	} else if (/(Android)/i.test(navigator.userAgent)) {
+		alert(navigator.userAgent);
+		$('html,body').css('overflow','hidden');
+	}
+
+	function ss(){
+		if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+			alert(navigator.userAgent);
+			removeEventListener('touchmove',function stor(event){
+				event.preventDefault();
+			}, false);
+		} else if (/(Android)/i.test(navigator.userAgent)) {
+			alert(navigator.userAgent);
+			$('html,body').css('overflow','auto');
+		}
+
+	}
 
 
 </script>
