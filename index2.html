@@ -7,25 +7,87 @@
 		<link rel="stylesheet" href="css/reset.min.css" />
 		<link rel="stylesheet" href="css/index.css" />
 	</head>
-	<body style='background-color: #F1F2F3'>
-		<p class="title">填写信息后会派老师跟您联系</p>
-		<form action="/ssss/" method="post" id="form">
-			<div class="name">
-				<label>姓&nbsp;&nbsp;&nbsp; 名 :</label><input maxlength="8"  type="text" id="na" value="请输入姓名" name="keyWord"/>
-			</div>
-			<div class="phone">
-				<label>手机号 :</label><input maxlength="11" type="tel" id="ph" value="请输入手机号" name="keyWord" />
-			</div>
-			<button type="button" id='submit' class="submit">报名</button>
-		</form>
-		<div class="tishi">
-			<!--报名成功-->
-			<img src="img/alert.png" alt="" />
-			<div>我知道了</div>
+	<body>
+		<div class="firstW">
+			<img src="img/first_02.jpg" alt="" /> 
 		</div>
-		
-		
+		<div class="second">
+			<div class="content">
+				<h1>高三数学暑期特惠班</h1>
+				<p>
+					<span>达内科技培训公司</span><span class="schoolLogo"></span>
+					<span><img src="img/fx (2).png" alt="" class="img2"/><b>100</b></span>
+					<span><img src="img/fx (1).png" alt="" class="img1"/><b>10</b></span>
+					
+				</p>
+                <div class="content_1">
+                	<div class="time">
+                		<div class="lf">
+                			<p class="p1">开始时间</p>
+                			<p class="p2">8月5日&nbsp;21:41</p>
+                		</div>
+                		<div class="rt">
+                			<p class="p1">结束时间</p>
+                			<p class="p2">8月5日&nbsp;21:41</p>
+                		</div>
+                		
+                	</div>
+                	<span class="line"></span>
+                	<div class="lf">
+                			<p class="p1">活动地点</p>
+                			<p class="p2">8北京市朝阳门SOHO1002室</p>
+                	</div>
+                </div>
+                <div class="line2"></div>
+                <div class="content_2">
+                	<p>这是一个特别好的暑期活动</p>
+                	<div class="img">
+                		<img src="img/two.jpg" alt="" />
+                	</div>
+                	<p>值的你们期待吧，想要报名的小伙伴赶快来报名吧，特惠班级仅限一天</p>
+                </div>	
+			</div>
+		</div>
+		<div class="third">
+			<div>
+				<p class="p1">活动类型</p>
+				<p class="p2 blue"><span>达内机构</span> <span>暑期特训班</span></p>
+			</div>
+			<div class="cost">
+				<p class="p1">活动费用</p>
+				<p class="p2 green">100元/人</p>
+			</div>
+			<div>
+				<p class="p1">联系电话</p>
+				<p class="p2" id='telhref'><a href="tel:400-1233214">400-1233214</a></p>
+			</div>
+			<p class="p1">注：此活动目前只针对北京用户开发，活动开始前随时退款</p>
+		</div>
+		<div class="ss"></div>
+		<div class="btn">
+			<div>
+				<button class="btnl"><a href="">在线咨询</a></button>
+				<button class="btnr"><a href="index2.html">报名</a></button>
+			</div>
+		</div>
+		<div style="width: 100%;height:100%;line-height:100%;position: fixed;top: 0;left: 0;background: rgba(0,0,0,.3);z-index:5;text-align: center"><span id="ss">111</span></div>
 	</body>
 </html>
+
 <script type="text/javascript" src="js/jquery-1.11.3.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="js/index.js" charset="UTF-8"></script>		
+<script type="text/javascript" src="js/index.js" charset="UTF-8"></script>
+<script>
+	//$('html,body').css('overflow','hidden');
+	if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+		//alert(navigator.userAgent);
+		document.body.addEventListener('touchmove', function(event) {
+			event.preventDefault();
+		}, false);
+	} else if (/(Android)/i.test(navigator.userAgent)) {
+		//alert(navigator.userAgent);
+		$('html,body').css('overflow','hidden');
+	}
+
+
+
+</script>
