@@ -85,7 +85,10 @@
 		}, false);
 	} else if (/(Android)/i.test(navigator.userAgent)) {
 		alert(navigator.userAgent);
-		$('html,body').css('overflow','hidden');
+		document.body.addEventListener('touchmove', function(event) {
+			event.preventDefault();
+		}, false);
+	//$('html,body').css('overflow','hidden');
 	}
 
 
