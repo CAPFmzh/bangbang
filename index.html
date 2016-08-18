@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div class="firstW">
-			<img src="img/first_02.jpg" alt="" />
+			<img src="img/first_02.jpg" alt="" /> 
 		</div>
 		<div class="second">
 			<div class="content">
@@ -40,11 +40,11 @@
                 </div>
                 <div class="line2"></div>
                 <div class="content_2">
-                	<p class="p1">这是一个特别好的暑期活动</p>
+                	<p>这是一个特别好的暑期活动</p>
                 	<div class="img">
                 		<img src="img/two.jpg" alt="" />
                 	</div>
-                	<p class="p2">值的你们期待吧，想要报名的小伙伴赶快来报名吧，特惠班级仅限一天</p>
+                	<p>值的你们期待吧，想要报名的小伙伴赶快来报名吧，特惠班级仅限一天</p>
                 </div>	
 			</div>
 		</div>
@@ -59,7 +59,7 @@
 			</div>
 			<div>
 				<p class="p1">联系电话</p>
-				<p class="p2" id='telhref'><a href="tel:10000">400-1233214</a></p>
+				<p class="p2" id='telhref'><a href="tel:400-1233214">400-1233214</a></p>
 			</div>
 			<p class="p1">注：此活动目前只针对北京用户开发，活动开始前随时退款</p>
 		</div>
@@ -70,8 +70,24 @@
 				<button class="btnr"><a href="index2.html">报名</a></button>
 			</div>
 		</div>
+		<div style="width: 100%;height:100%;line-height:100%;position: fixed;top: 0;left: 0;background: rgba(0,0,0,.3);z-index:5;text-align: center"><span id="ss">111</span></div>
 	</body>
 </html>
-<script type="text/javascript" src="js/jquery-1.11.3.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="js/index.js" charset="UTF-8"></script>		
 
+<script type="text/javascript" src="js/jquery-1.11.3.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/index.js" charset="UTF-8"></script>
+<script>
+	//$('html,body').css('overflow','hidden');
+	if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+		alert(navigator.userAgent);
+		document.body.addEventListener('touchmove', function(event) {
+			event.preventDefault();
+		}, false);
+	} else if (/(Android)/i.test(navigator.userAgent)) {
+		alert(navigator.userAgent);
+		$('html,body').css('overflow','hidden');
+	}
+
+
+
+</script>
