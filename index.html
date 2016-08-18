@@ -101,10 +101,10 @@
 		$('html,body').css('overflow','hidden');
 	}
 
-	function ss(){
+function ss(){
 		if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
 			alert(navigator.userAgent);
-			removeEventListener('touchmove',function stor(event){
+			document.body.removeEventListener('touchmove',function stor(event){
 				event.preventDefault();
 			}, false);
 		} else if (/(Android)/i.test(navigator.userAgent)) {
