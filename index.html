@@ -103,12 +103,12 @@
 			document.body.removeEventListener('touchmove', cc(), false);
 		}
 	}*/
-	$("body,.main").height($(window).height()).css({
-		"overflow-y": "hidden"
+	$("html,body").css({
+		"overflow": "hidden"
 	});
     function ss(){
-		$("body,.main").height($(window).height()).css({
-			"overflow-y": "auto"
+		$("html,body").css({
+			"overflow": "auto"
 		});
 	}
 
