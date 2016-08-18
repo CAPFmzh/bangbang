@@ -78,19 +78,26 @@
 <script type="text/javascript" src="js/index.js" charset="UTF-8"></script>
 <script>
 	//$('html,body').css('overflow','hidden');
-	if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-		alert(navigator.userAgent);
-		document.body.addEventListener('touchmove', function(event) {
+	// if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+	// 	alert(navigator.userAgent);
+	// 	document.body.addEventListener('touchmove', function(event) {
+	// 		event.preventDefault();
+	// 	}, false);
+	// } else if (/(Android)/i.test(navigator.userAgent)) {
+	// 	alert(navigator.userAgent);
+	// 	document.body.addEventListener('touchmove', function(event) {
+	// 		event.preventDefault();
+	// 	}, false);
+	// //$('html,body').css('overflow','hidden');
+	// }
+document.body.addEventListener('touchmove', function(event) {
+		event.preventDefault();
+	}, false);
+	$('#ss').on('click',function(){
+		document.body.removeEventListener('touchmove', function(event) {
 			event.preventDefault();
 		}, false);
-	} else if (/(Android)/i.test(navigator.userAgent)) {
-		alert(navigator.userAgent);
-		document.body.addEventListener('touchmove', function(event) {
-			event.preventDefault();
-		}, false);
-	//$('html,body').css('overflow','hidden');
-	}
-
+	});
 
 
 </script>
